@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest>
+  <version>1.5.1</version>
+  <manifestUri>
+  </manifestUri>
+  <downloadUri>
+  </downloadUri>
+  <loadAfter>
+    <li>Mlie.NPDTiers</li>
+  </loadAfter>
+  <showCrossPromotions>true</showCrossPromotions>
+</Manifest>

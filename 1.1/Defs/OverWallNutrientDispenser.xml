@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase" Name="OverWallNutrient">
+    <defName>OverWallNutrientPaste</defName>
+    <label>Over-Wall Nutrient Paste Dispenser</label>
+    <designatorDropdown>OverWallNutrientDispenser</designatorDropdown>
+    <description>A machine that synthesizes edible nutrient paste from organic feedstocks placed in adjacent hoppers. It consumes less ingredients and time than any other meal production method - but nobody likes eating nutrient paste. Accepts raw food, but not rough plant matter like hay.</description>
+    <thingClass>Building_NutrientPasteDispenser</thingClass>
+    <graphicData>
+      <texPath>OverWallNutrientDispenser</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <color>(232,255,191)</color>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3,4)</drawSize>
+      <damageData>
+        <rect>(0.02,0.25,2.96,2.85)</rect>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+      </damageData>
+      <shadowData>
+        <volume>(2.87,0.75,3.05)</volume>
+        <offset>(0,0,0.38)</offset>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <blockWind>true</blockWind>
+    <fillPercent>0.99</fillPercent>
+    <statBases>
+      <WorkToBuild>2200</WorkToBuild>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <building>
+      <isMealSource>true</isMealSource>
+      <wantsHopperAdjacent>true</wantsHopperAdjacent>
+      <nutritionCostPerDispense>0.3</nutritionCostPerDispense>
+      <soundDispense>DispensePaste</soundDispense>
+      <forceShowRoomStats>true</forceShowRoomStats>
+      <isEdifice>false</isEdifice>
+      <canPlaceOverWall>true</canPlaceOverWall>
+    </building>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>200</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+    </comps>
+    <size>(3,4)</size>
+    <costList>
+      <Steel>90</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <interactionCellOffset>(0,0,3)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Production</designationCategory>
+    <constructEffect>ConstructMetal</constructEffect>
+    <designationHotKey>Misc6</designationHotKey>
+    <canOverlapZones>false</canOverlapZones>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>NutrientPaste</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <ThingDef ParentName="OverWallNutrient">
+    <defName>OverWallNutrientDispenser2W</defName>
+    <label>Over-Wall Nutrient Paste Dispenser (Wide)</label>
+    <designatorDropdown>OverWallNutrientDispenser</designatorDropdown>
+    <graphicData>
+      <texPath>OverWallNutrientDispenser2W</texPath>
+      <drawSize>(3,4)</drawSize>
+    </graphicData>
+    <size>(3,4)</size>
+  </ThingDef>
+  <!-- NPD Tiers Over Wall -->
+  <ThingDef ParentName="BuildingBase" Abstract="True">
+    <defName>ChocoNutrientPasteOverWall</defName>
+    <label>chocolate paste dispenser (Over-Wall)</label>
+    <description>using a recycled nutrient paste dispenser, you can create yourself a fine chocolate paste dispenser!</description>
+    <thingClass>Building_NutrientPasteDispenser</thingClass>
+    <designatorDropdown>ChocoNutrientPasteDrop</designatorDropdown>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase" Abstract="True">
+    <defName>PrisonerNutrientPasteOverWall</defName>
+    <label>prisoner nutrient paste dispenser</label>
+    <description>Rusty gears and mold make this a questionable source of food.</description>
+    <thingClass>Building_NutrientPasteDispenser</thingClass>
+    <designatorDropdown>PrisonerNutrientPasteDrop</designatorDropdown>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase" Abstract="True">
+    <defName>FNutrientPasteDispenserOverWall</defName>
+    <label>fine nutrient paste dispenser</label>
+    <description>Artificially flavored and textured,the nutrient paste dispensed actually tastes pretty good!</description>
+    <thingClass>Building_NutrientPasteDispenser</thingClass>
+    <designatorDropdown>FNutrientPasteDispenserDrop</designatorDropdown>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase" Abstract="True">
+    <defName>INutrientPasteDispenserOverWall</defName>
+    <label>improved nutrient paste dispenser</label>
+    <description>The upgraded version of the fine nutrient paste dispenser, it's purple now!</description>
+    <thingClass>Building_NutrientPasteDispenser</thingClass>
+    <designatorDropdown>INutrientPasteDispenserDrop</designatorDropdown>
+  </ThingDef>
+  <!-- DropDown Group Defs -->
+  <DesignatorDropdownGroupDef>
+    <defName>OverWallNutrientDispenser</defName>
+  </DesignatorDropdownGroupDef>
+  <DesignatorDropdownGroupDef>
+    <defName>ChocoNutrientPasteDrop</defName>
+  </DesignatorDropdownGroupDef>
+  <DesignatorDropdownGroupDef>
+    <defName>PrisonerNutrientPasteDrop</defName>
+  </DesignatorDropdownGroupDef>
+  <DesignatorDropdownGroupDef>
+    <defName>FNutrientPasteDispenserDrop</defName>
+  </DesignatorDropdownGroupDef>
+  <DesignatorDropdownGroupDef>
+    <defName>INutrientPasteDispenserDrop</defName>
+  </DesignatorDropdownGroupDef>
+</Defs>

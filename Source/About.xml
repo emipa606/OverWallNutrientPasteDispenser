@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Over-Wall Nutrient Paste Dispenser</name>
+  <author>Primus the Conquerer</author>
+  <url>
+  </url>
+  <supportedVersions>
+    <li>1.2</li>
+    <li>1.1</li>
+    <li>1.0</li>
+  </supportedVersions>
+  <loadAfter>
+    <li>Mlie.NPDTiers</li>
+  </loadAfter>
+  <packageId>Primus.OverWallNutrient</packageId>
+  <description>I hate how the Vanilla Nutrient Paste Dispenser isn't 100% flush with the Wall. So i made an Over-Wall Nutrient Dispenser inspired by the Over-Wall Cooler from Replace Stuff.
+	
+</description>
+</ModMetaData>
