@@ -1,4 +1,7 @@
 # Changelog for OverWallNutrientPasteDispenser
 
+1.3.1 - Now shows the hopper as gizmo when [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2856692774]Hopper Gizmo for Nutrient Dispenser[/url] is loaded
+
+
 1.0.0.0 - First publish
 
