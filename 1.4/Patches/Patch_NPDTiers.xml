@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>NPDTiers - The Nutrient Paste Expansion Mod (Continued)</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <!-- Dropdown Designators -->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="ChocoNutrientPaste"]</xpath>
+          <value>
+            <designatorDropdown>ChocoNutrientPasteDrop</designatorDropdown>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="PrisonerNutrientPaste"]</xpath>
+          <value>
+            <designatorDropdown>PrisonerNutrientPasteDrop</designatorDropdown>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="FNutrientPasteDispenser"]</xpath>
+          <value>
+            <designatorDropdown>FNutrientPasteDispenserDrop</designatorDropdown>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="INutrientPasteDispenser"]</xpath>
+          <value>
+            <designatorDropdown>INutrientPasteDispenserDrop</designatorDropdown>
+          </value>
+        </li>
+        <!-- New Over Wall Dispenser -->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="ChocoNutrientPasteOverWall"]</xpath>
+          <value>
+            <ThingDef ParentName="BuildingBase">
+              <defName>ChocoNutrientPasteOverWall</defName>
+              <label>chocolate paste dispenser (Over-Wall)</label>
+              <description>Using a recycled nutrient paste dispenser, you can create yourself a fine chocolate paste dispenser!</description>
+              <thingClass>Building_NutrientPasteDispenser</thingClass>
+              <designatorDropdown>ChocoNutrientPasteDrop</designatorDropdown>
+              <graphicData>
+                <texPath>NPDTiers/Chocolate/COverWallNutrientDispenser</texPath>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <color>(160,93,0)</color>
+                <shaderType>CutoutComplex</shaderType>
+                <drawSize>(3,4)</drawSize>
+                <damageData>
+                  <rect>(0.02,0.25,2.96,2.85)</rect>
+                  <cornerTL>Damage/Corner</cornerTL>
+                  <cornerTR>Damage/Corner</cornerTR>
+                </damageData>
+                <shadowData>
+                  <volume>(2.87,0.75,3.05)</volume>
+                  <offset>(0,0,0.38)</offset>
+                </shadowData>
+              </graphicData>
+              <size>(3,4)</size>
+              <statBases>
+                <WorkToBuild>1500</WorkToBuild>
+                <MaxHitPoints>300</MaxHitPoints>
+                <Flammability>0.4</Flammability>
+              </statBases>
+              <building>
+                <isMealSource>true</isMealSource>
+                <wantsHopperAdjacent>true</wantsHopperAdjacent>
+                <nutritionCostPerDispense>0.2</nutritionCostPerDispense>
+                <soundDispense>DispensePaste</soundDispense>
+                <forceShowRoomStats>true</forceShowRoomStats>
+                <isEdifice>false</isEdifice>
+                <canPlaceOverWall>true</canPlaceOverWall>
+              </building>
+              <comps>
+                <li Class="CompProperties_Power">
+                  <compClass>CompPowerTrader</compClass>
+                  <basePowerConsumption>400</basePowerConsumption>
+                </li>
+                <li Class="CompProperties_Flickable" />
+                <li Class="CompProperties_Breakdownable" />
+              </comps>
+              <costList>
+                <Steel>250</Steel>
+                <ComponentIndustrial>6</ComponentIndustrial>
+              </costList>
+              <placeWorkers>
+                <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+              </placeWorkers>
+              <researchPrerequisites>
+                <li>NutrientPaste</li>
+              </researchPrerequisites>
+              <socialPropernessMatters>true</socialPropernessMatters>
+              <interactionCellOffset>(0,0,3)</interactionCellOffset>
+              <hasInteractionCell>true</hasInteractionCell>
+              <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+              <designationCategory>Production</designationCategory>
+              <constructEffect>ConstructMetal</constructEffect>
+              <designationHotKey>Misc6</designationHotKey>
+              <canOverlapZones>false</canOverlapZones>
+              <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+              <modExtensions>
+                <li Class="NutrientPasteTiers.NutrientPasteCustom">
+                  <customMeal>MealChocoPaste</customMeal>
+                  <mysteryIngredients>false</mysteryIngredients>
+                  <ingredientList>
+                    <Chocolate>0.6</Chocolate>
+                  </ingredientList>
+                </li>
+              </modExtensions>
+            </ThingDef>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="PrisonerNutrientPasteOverWall"]</xpath>
+          <value>
+            <ThingDef ParentName="BuildingBase">
+              <defName>PrisonerNutrientPasteOverWall</defName>
+              <label>prisoner nutrient paste dispenser (Over-Wall)</label>
+              <description>Rusty gears and mold make this a questionable source of food.</description>
+              <thingClass>Building_NutrientPasteDispenser</thingClass>
+              <designatorDropdown>PrisonerNutrientPasteDrop</designatorDropdown>
+              <graphicData>
+                <texPath>NPDTiers/Prisoner/POverWallNutrientDispenser</texPath>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <color>(212,212,212)</color>
+                <shaderType>CutoutComplex</shaderType>
+                <drawSize>(3,4)</drawSize>
+                <damageData>
+                  <rect>(0.02,0.25,2.96,2.85)</rect>
+                  <cornerTL>Damage/Corner</cornerTL>
+                  <cornerTR>Damage/Corner</cornerTR>
+                </damageData>
+                <shadowData>
+                  <volume>(2.87,0.75,3.05)</volume>
+                  <offset>(0,0,0.38)</offset>
+                </shadowData>
+              </graphicData>
+              <size>(3,4)</size>
+              <statBases>
+                <WorkToBuild>1500</WorkToBuild>
+                <MaxHitPoints>300</MaxHitPoints>
+                <Flammability>0.4</Flammability>
+              </statBases>
+              <building>
+                <isMealSource>true</isMealSource>
+                <wantsHopperAdjacent>true</wantsHopperAdjacent>
+                <nutritionCostPerDispense>0.2</nutritionCostPerDispense>
+                <soundDispense>DispensePaste</soundDispense>
+                <forceShowRoomStats>true</forceShowRoomStats>
+                <isEdifice>false</isEdifice>
+                <canPlaceOverWall>true</canPlaceOverWall>
+              </building>
+              <comps>
+                <li Class="CompProperties_Power">
+                  <compClass>CompPowerTrader</compClass>
+                  <basePowerConsumption>400</basePowerConsumption>
+                </li>
+                <li Class="CompProperties_Flickable" />
+                <li Class="CompProperties_Breakdownable" />
+              </comps>
+              <costList>
+                <Steel>100</Steel>
+                <ComponentIndustrial>2</ComponentIndustrial>
+              </costList>
+              <placeWorkers>
+                <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+              </placeWorkers>
+              <researchPrerequisites>
+                <li>PrisonerNutrientPaste</li>
+              </researchPrerequisites>
+              <socialPropernessMatters>true</socialPropernessMatters>
+              <interactionCellOffset>(0,0,3)</interactionCellOffset>
+              <hasInteractionCell>true</hasInteractionCell>
+              <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+              <designationCategory>Production</designationCategory>
+              <constructEffect>ConstructMetal</constructEffect>
+              <designationHotKey>Misc6</designationHotKey>
+              <canOverlapZones>false</canOverlapZones>
+              <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+              <modExtensions>
+                <li Class="NutrientPasteTiers.NutrientPasteCustom">
+                  <customMeal>MealPrisonerNutrientPaste</customMeal>
+                  <mysteryIngredients>true</mysteryIngredients>
+                </li>
+              </modExtensions>
+            </ThingDef>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="FNutrientPasteDispenserOverWall"]</xpath>
+          <value>
+            <ThingDef ParentName="BuildingBase">
+              <defName>FNutrientPasteDispenserOverWall</defName>
+              <label>fine nutrient paste dispenser (Over-Wall</label>
+              <description>Artificially flavored and textured,the nutrient paste dispensed actually tastes pretty good!</description>
+              <thingClass>Building_NutrientPasteDispenser</thingClass>
+              <designatorDropdown>FNutrientPasteDispenserDrop</designatorDropdown>
+              <graphicData>
+                <texPath>NPDTiers/Fine/FOverWallNutrientDispenser</texPath>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <color>(192,214,255)</color>
+                <shaderType>CutoutComplex</shaderType>
+                <drawSize>(3,4)</drawSize>
+                <damageData>
+                  <rect>(0.02,0.25,2.96,2.85)</rect>
+                  <cornerTL>Damage/Corner</cornerTL>
+                  <cornerTR>Damage/Corner</cornerTR>
+                </damageData>
+                <shadowData>
+                  <volume>(2.87,0.75,3.05)</volume>
+                  <offset>(0,0,0.38)</offset>
+                </shadowData>
+              </graphicData>
+              <size>(3,4)</size>
+              <statBases>
+                <WorkToBuild>5000</WorkToBuild>
+                <MaxHitPoints>600</MaxHitPoints>
+                <Flammability>0.5</Flammability>
+              </statBases>
+              <building>
+                <isMealSource>true</isMealSource>
+                <wantsHopperAdjacent>true</wantsHopperAdjacent>
+                <nutritionCostPerDispense>0.6</nutritionCostPerDispense>
+                <soundDispense>DispensePaste</soundDispense>
+                <forceShowRoomStats>true</forceShowRoomStats>
+                <isEdifice>false</isEdifice>
+                <canPlaceOverWall>true</canPlaceOverWall>
+              </building>
+              <comps>
+                <li Class="CompProperties_Power">
+                  <compClass>CompPowerTrader</compClass>
+                  <basePowerConsumption>600</basePowerConsumption>
+                </li>
+                <li Class="CompProperties_Flickable" />
+                <li Class="CompProperties_Breakdownable" />
+              </comps>
+              <costList>
+                <Steel>500</Steel>
+                <Plasteel>80</Plasteel>
+                <ComponentIndustrial>10</ComponentIndustrial>
+                <ComponentSpacer>3</ComponentSpacer>
+              </costList>
+              <placeWorkers>
+                <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+              </placeWorkers>
+              <researchPrerequisites>
+                <li>FineNutrientPaste</li>
+              </researchPrerequisites>
+              <socialPropernessMatters>true</socialPropernessMatters>
+              <interactionCellOffset>(0,0,3)</interactionCellOffset>
+              <hasInteractionCell>true</hasInteractionCell>
+              <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+              <designationCategory>Production</designationCategory>
+              <constructEffect>ConstructMetal</constructEffect>
+              <designationHotKey>Misc6</designationHotKey>
+              <canOverlapZones>false</canOverlapZones>
+              <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+              <modExtensions>
+                <li Class="NutrientPasteTiers.NutrientPasteCustom">
+                  <customMeal>MealFineNutrientPaste</customMeal>
+                  <mysteryIngredients>false</mysteryIngredients>
+                </li>
+              </modExtensions>
+            </ThingDef>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="INutrientPasteDispenserOverWall"]</xpath>
+          <value>
+            <ThingDef ParentName="BuildingBase">
+              <defName>INutrientPasteDispenserOverWall</defName>
+              <label>improved nutrient paste dispenser (Over-Wall)</label>
+              <description>The upgraded version of the fine nutrient paste dispenser, it's purple now!</description>
+              <thingClass>Building_NutrientPasteDispenser</thingClass>
+              <designatorDropdown>INutrientPasteDispenserDrop</designatorDropdown>
+              <graphicData>
+                <texPath>NPDTiers/Improved/IOverWallNutrientDispenser</texPath>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <color>(192,136,220)</color>
+                <shaderType>CutoutComplex</shaderType>
+                <drawSize>(3,4)</drawSize>
+                <damageData>
+                  <rect>(0.02,0.25,2.96,2.85)</rect>
+                  <cornerTL>Damage/Corner</cornerTL>
+                  <cornerTR>Damage/Corner</cornerTR>
+                </damageData>
+                <shadowData>
+                  <volume>(2.87,0.75,3.05)</volume>
+                  <offset>(0,0,0.38)</offset>
+                </shadowData>
+              </graphicData>
+              <size>(3,4)</size>
+              <statBases>
+                <WorkToBuild>4000</WorkToBuild>
+                <MaxHitPoints>400</MaxHitPoints>
+                <Flammability>0.4</Flammability>
+              </statBases>
+              <building>
+                <isMealSource>true</isMealSource>
+                <wantsHopperAdjacent>true</wantsHopperAdjacent>
+                <nutritionCostPerDispense>0.3</nutritionCostPerDispense>
+                <soundDispense>DispensePaste</soundDispense>
+                <forceShowRoomStats>true</forceShowRoomStats>
+                <isEdifice>false</isEdifice>
+                <canPlaceOverWall>true</canPlaceOverWall>
+              </building>
+              <comps>
+                <li Class="CompProperties_Power">
+                  <compClass>CompPowerTrader</compClass>
+                  <basePowerConsumption>500</basePowerConsumption>
+                </li>
+                <li Class="CompProperties_Flickable" />
+                <li Class="CompProperties_Breakdownable" />
+              </comps>
+              <costList>
+                <Steel>250</Steel>
+                <ComponentIndustrial>8</ComponentIndustrial>
+              </costList>
+              <placeWorkers>
+                <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+              </placeWorkers>
+              <researchPrerequisites>
+                <li>ImprovedNutrientPaste</li>
+              </researchPrerequisites>
+              <socialPropernessMatters>true</socialPropernessMatters>
+              <interactionCellOffset>(0,0,3)</interactionCellOffset>
+              <hasInteractionCell>true</hasInteractionCell>
+              <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+              <designationCategory>Production</designationCategory>
+              <constructEffect>ConstructMetal</constructEffect>
+              <designationHotKey>Misc6</designationHotKey>
+              <canOverlapZones>false</canOverlapZones>
+              <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+              <modExtensions>
+                <li Class="NutrientPasteTiers.NutrientPasteCustom">
+                  <customMeal>MealImprovedNutrientPaste</customMeal>
+                  <mysteryIngredients>false</mysteryIngredients>
+                </li>
+              </modExtensions>
+            </ThingDef>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

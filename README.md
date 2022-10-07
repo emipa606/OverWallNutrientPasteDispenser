@@ -5,6 +5,8 @@
 Update of Primus the Conquerers mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2074245348
 
+- Now shows the hopper as gizmo when https://steamcommunity.com/sharedfiles/filedetails/?id=2856692774]Hopper Gizmo for Nutrient Dispenser is loaded
+
 ![Image](https://i.imgur.com/pufA0kM.png)
 
 	
