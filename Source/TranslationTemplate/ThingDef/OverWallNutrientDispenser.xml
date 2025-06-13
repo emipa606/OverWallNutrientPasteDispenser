@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Over-Wall Nutrient Paste Dispenser (Wide) -->
+  <OverWallNutrientDispenser2W.label>Over-Wall Nutrient Paste Dispenser (Wide)</OverWallNutrientDispenser2W.label>
+  <!-- EN: A machine that synthesizes edible nutrient paste from organic feedstocks placed in adjacent hoppers. It consumes less ingredients and time than any other meal production method - but nobody likes eating nutrient paste. Accepts raw food, but not rough plant matter like hay. -->
+  <OverWallNutrientDispenser2W.description>A machine that synthesizes edible nutrient paste from organic feedstocks placed in adjacent hoppers. It consumes less ingredients and time than any other meal production method - but nobody likes eating nutrient paste. Accepts raw food, but not rough plant matter like hay.</OverWallNutrientDispenser2W.description>
+  <!-- EN: Over-Wall Nutrient Paste Dispenser -->
+  <OverWallNutrientPaste.label>Over-Wall Nutrient Paste Dispenser</OverWallNutrientPaste.label>
+  <!-- EN: A machine that synthesizes edible nutrient paste from organic feedstocks placed in adjacent hoppers. It consumes less ingredients and time than any other meal production method - but nobody likes eating nutrient paste. Accepts raw food, but not rough plant matter like hay. -->
+  <OverWallNutrientPaste.description>A machine that synthesizes edible nutrient paste from organic feedstocks placed in adjacent hoppers. It consumes less ingredients and time than any other meal production method - but nobody likes eating nutrient paste. Accepts raw food, but not rough plant matter like hay.</OverWallNutrientPaste.description>
+</LanguageData>
