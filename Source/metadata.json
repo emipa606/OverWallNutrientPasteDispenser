@@ -3,7 +3,13 @@
   "CanAdd": "0",
   "CanRemove": "2",
   "PreviewVersion": "1.6",
-  "LastXmlCleaning": "2025-06-14T20:02:21.9800403+02:00",
+  "LastXmlCleaning": "2025-11-17T20:42:16.3338331+01:00",
   "SocialImageSet": true,
-  "SearchTags": " wall"
+  "SearchTags": " wall",
+  "Patches": true,
+  "Defs": true,
+  "Assemblies": false,
+  "LinesOfCode": 0,
+  "LinesOfXML": 24935,
+  "CodeBaseSize": 69
 }

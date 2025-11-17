@@ -59,6 +59,11 @@
                 </shadowData>
               </graphicData>
               <size>(3,4)</size>
+              <altitudeLayer>BuildingOnTop</altitudeLayer>
+              <passability>Impassable</passability>
+              <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+              <blockWind>true</blockWind>
+              <fillPercent>0.99</fillPercent>
               <statBases>
                 <WorkToBuild>1500</WorkToBuild>
                 <MaxHitPoints>300</MaxHitPoints>
@@ -137,6 +142,11 @@
                   <offset>(0,0,0.38)</offset>
                 </shadowData>
               </graphicData>
+              <altitudeLayer>BuildingOnTop</altitudeLayer>
+              <passability>Impassable</passability>
+              <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+              <blockWind>true</blockWind>
+              <fillPercent>0.99</fillPercent>
               <size>(3,4)</size>
               <statBases>
                 <WorkToBuild>1500</WorkToBuild>
@@ -213,6 +223,11 @@
                   <offset>(0,0,0.38)</offset>
                 </shadowData>
               </graphicData>
+              <altitudeLayer>BuildingOnTop</altitudeLayer>
+              <passability>Impassable</passability>
+              <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+              <blockWind>true</blockWind>
+              <fillPercent>0.99</fillPercent>
               <size>(3,4)</size>
               <statBases>
                 <WorkToBuild>5000</WorkToBuild>
@@ -291,6 +306,11 @@
                   <offset>(0,0,0.38)</offset>
                 </shadowData>
               </graphicData>
+              <altitudeLayer>BuildingOnTop</altitudeLayer>
+              <passability>Impassable</passability>
+              <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+              <blockWind>true</blockWind>
+              <fillPercent>0.99</fillPercent>
               <size>(3,4)</size>
               <statBases>
                 <WorkToBuild>4000</WorkToBuild>

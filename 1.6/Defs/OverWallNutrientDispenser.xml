@@ -23,7 +23,8 @@
       </shadowData>
     </graphicData>
     <altitudeLayer>BuildingOnTop</altitudeLayer>
-    <passability>PassThroughOnly</passability>
+    <passability>Impassable</passability>
+    <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
     <blockWind>true</blockWind>
     <fillPercent>0.99</fillPercent>
     <statBases>
@@ -37,6 +38,10 @@
       <nutritionCostPerDispense>0.3</nutritionCostPerDispense>
       <soundDispense>DispensePaste</soundDispense>
       <forceShowRoomStats>true</forceShowRoomStats>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <destroySound>BuildingDestroyed_Metal_Big</destroySound>
       <isEdifice>false</isEdifice>
       <canPlaceOverWall>true</canPlaceOverWall>
     </building>
