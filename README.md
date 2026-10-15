@@ -41,4 +41,4 @@ A Patch for [NPD Tiers](https://steamcommunity.com/sharedfiles/filedetails/?id=2
 
  
 
-[![Image](https://img.shields.io/github/v/release/emipa606/OverWallNutrientPasteDispenser?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2586462158) | tags:  wall
+[![Image](https://img.shields.io/github/v/release/emipa606/OverWallNutrientPasteDispenser?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2586462158) | wall
